@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LayoutComponent } from './components/layout/layout.component';
 import { HeaderComponent } from './components/header/header.component';
-
-
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
-  declarations: [LayoutComponent, HeaderComponent],
-  exports: [LayoutComponent],
+  declarations: [HeaderComponent, SidebarComponent],
+  exports: [HeaderComponent, SidebarComponent],
   imports: [
     CommonModule
   ]

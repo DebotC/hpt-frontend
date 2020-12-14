@@ -1,0 +1,11 @@
+@import '../assets/styles/abstracts/index';
+
+.page-content {
+    margin-left: $sidebar-width;
+    height: 100vh;
+    background-color: $hpt-grey;
+}
+
+.card {
+    background-color: white;
+}

@@ -1,0 +1,15 @@
+@import '../../../../assets/styles/abstracts/variables';
+
+.sidebar-wrapper {
+    width: $sidebar-width;
+    height: 100%;
+    position: fixed;
+
+    .sidebar-brand {
+        margin-top: 10%;
+
+        img {
+            width: 120px;
+        }
+    }
+}
