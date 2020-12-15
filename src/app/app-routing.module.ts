@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router';
       path: '',
       children: [
         {
-          path: 'athletes', 
+          path: 'athletes',
           loadChildren: () => import('src/app/athletes/athletes.module').then(m => m.AthletesModule)
         }
       ]
