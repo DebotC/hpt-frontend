@@ -1,0 +1,12 @@
+<label class="col-form-label col-md-3 d-flex justify-content-xs-start"
+    [ngClass]="{ 'label-is-invalid': showErrors && field.invalid }">
+    {{ label }}
+</label>
+<div class="col-sm-9">
+    <div class="form-check" *ngFor="let option of options">
+        <input class="form-check-input" type="radio" [(ngModel)]="value" [value]="option"
+            [ngClass]="{ 'is-invalid': showErrors && field.invalid }">
+        <label class="form-check-label">{{ option }}</label>
+    </div>
+    <hpt-validation-message [field]="field" [showErrors]="showErrors && field.invalid"></hpt-validation-message>
+</div>

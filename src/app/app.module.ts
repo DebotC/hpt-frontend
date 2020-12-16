@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
+import { EnumToArrayPipe } from './shared/pipes/enum-to-array.pipe';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { LayoutModule } from './layout/layout.module';
     AppRoutingModule,
     LayoutModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ EnumToArrayPipe ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

@@ -1,0 +1,8 @@
+<label class="col-form-label col-md-3 d-flex justify-content-xs-start"
+    [ngClass]="{ 'label-is-invalid': showErrors && field.invalid }">
+    {{ label }}
+</label>
+<div class="col-md-9">
+    <input class="form-control" [(ngModel)]="value" [ngClass]="{ 'is-invalid': showErrors && field.invalid }">
+    <hpt-validation-message [field]="field" [showErrors]="showErrors && field.invalid"></hpt-validation-message>
+</div>

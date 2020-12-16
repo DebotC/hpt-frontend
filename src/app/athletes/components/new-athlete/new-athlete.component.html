@@ -1,0 +1,27 @@
+<div class="card">
+    <div class="card-body">
+        <h1>Voeg een nieuwe atleet toe</h1>
+        <p>Wanneer je de atleet hebt toegevoegd, krijgt deze een uitnodiging tot het platform via mail.</p>
+        <div class="col-md-10">
+            <form [formGroup]="newAthleteForm">
+                <hpt-input class="form-group row" [label]="'Voornaam'" formControlName="firstName"
+                    [field]="newAthleteForm.controls.firstName"
+                    [showErrors]="showErrors"></hpt-input>
+                
+                <hpt-input class="form-group row" [label]="'Naam'" formControlName="lastName"
+                    [field]="newAthleteForm.controls.lastName" [showErrors]="showErrors"></hpt-input>
+    
+                <hpt-input class="form-group row" [label]="'E-mail'" formControlName="email"
+                    [field]="newAthleteForm.controls.email" [showErrors]="showErrors"></hpt-input>
+
+                <hpt-radio-input class="form-group row" [label]="'Type'" formControlName="type"
+                    [options]="AthleteType | enumToArray" [field]="newAthleteForm.controls.type" [showErrors]="showErrors"></hpt-radio-input>
+    
+                <div class="d-flex justify-content-end">
+                    <button class="btn btn-secondary mr-2" type="button" (click)="cancelCreation()">Annuleren</button>
+                    <button class="btn btn-primary" type="button" (click)="createAthlete()">Toevoegen</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

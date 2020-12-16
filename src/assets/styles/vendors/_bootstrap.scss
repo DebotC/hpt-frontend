@@ -24,3 +24,20 @@
         color: white;
     }
 }
+
+.btn-primary {
+    background-color: $hpt-primary;
+    color: white;
+    border-color: $hpt-primary;
+
+    &:hover {
+        background-color: transparent;
+        color: $hpt-primary;
+        border-color: $hpt-primary
+    }
+}
+
+.form-control {
+    border-radius: 0;
+    border-color: $hpt-primary;
+}
