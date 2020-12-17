@@ -3,5 +3,13 @@
         <div class="sidebar-brand d-flex justify-content-center">
             <img src="../../../../assets/images/Logo_hpt.png" alt="Logo HPT">
         </div>
+        <div id="main-navigation">
+            <div class="nav flex-colum nav-pills">
+                <div *ngFor="let navItem of navigation" class="nav-link" [ngClass]="{ 'active': isRouteActive(navItem.route)}"
+                    (click)="navigate(navItem.route)">
+                    <hpt-nav-item [label]="navItem.label" [icon]="navItem.icon"></hpt-nav-item>
+                </div>
+            </div>
+        </div>
     </div>
 </nav>

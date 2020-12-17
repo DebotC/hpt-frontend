@@ -1,15 +1,38 @@
-@import '../../../../assets/styles/abstracts/variables';
+@import '../../../../assets/styles/abstracts/index';
 
 .sidebar-wrapper {
     width: $sidebar-width;
     height: 100%;
     position: fixed;
 
-    .sidebar-brand {
-        margin-top: 10%;
+    .sidebar-content {
+        .sidebar-brand {
+            margin-top: 10%;
+    
+            img {
+                width: 120px;
+            }
+        }
 
-        img {
-            width: 120px;
+        #main-navigation {
+            padding-top: 15%;
+
+            .nav-link {
+                width: 100%;
+                border-radius: 0;
+                padding: 0.75rem 1rem;
+                color: white;
+
+                &.active {
+                    background-color: $hpt-accent;
+                    border-left: 5px solid $hpt-secondary;
+                }
+
+                &:hover {
+                    background-color: $hpt-accent;
+                    border-left: 5px solid $hpt-secondary;
+                }
+            }
         }
     }
 }
